@@ -1,0 +1,51 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Java sources
+*.java text diff=java
+*.groovy text diff=java
+*.scala text diff=java
+*.gradle text diff=java
+*.gradle.kts text diff=kotlin
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.css text diff=css
+*.df text
+*.htm text diff=html
+*.html text diff=html
+*.js text
+*.jsp text
+*.jspf text
+*.jspx text
+*.properties text
+*.tld text
+*.tag text
+*.tagx text
+*.xml text
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class binary
+*.dll binary
+*.ear binary
+*.jar binary
+*.so binary
+*.war binary
+*.jks binary
+
+# Common build-tool wrapper scripts
+mvnw text eol=lf
+gradlew text eol=lf
+
+# Git LFS
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Force batch scripts to always use CRLF line endings
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Force bash scripts to always use LF line endings
+*.sh text eol=lf
